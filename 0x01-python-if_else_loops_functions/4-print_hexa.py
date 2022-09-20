@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+n range(0, 99):
+    print('{} = 0x{:x}'.format(num, num))#!/usr/bin/python3
 # Author - Tolulope Fakunle
 
 """Print numbers 0 to 98 in decimal and hexadecimal."""
