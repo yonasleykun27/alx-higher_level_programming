@@ -1,1 +1,1 @@
-# Solutions to tasks on 0x06. Python - Classes and Objects
+# Solutions to tasks on 0x06. Python - Classes and Objects by yonas leykun
