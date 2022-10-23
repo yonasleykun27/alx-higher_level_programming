@@ -1,31 +1,30 @@
 #!/usr/bin/python3
 """
 
-This module contain a function that prints a square
+This module is composed by a function that prints a square with the character #
 
 """
 
 
 def print_square(size):
-    """This function prints a square with the character #
+    """ Function that prints a square with the character #
 
     Args:
-        size (int): This represents the length of the square
+        size: size of the square printed
+
+    Returns:
+        No return
 
     Raises:
-        TypeError: If size is not an integer
-        TypeError: If size is a float and less than zero
-        ValueError: If size is less than zero
+        TypeError: If size is not an integer number
+
 
     """
 
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
-    elif size < 0:
+    if size < 0:
         raise ValueError("size must be >= 0")
-    elif isinstance(size, float) and size < 0:
-        raise TypeError("size must be an integer")
-    for n in range(0, size):
-        for m in range(size):
-            print("#", end="")
-        print("")
+
+    for i in range(size):
+        print("#" * size)
