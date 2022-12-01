@@ -1,11 +1,12 @@
--- Use 'hbtn_0d_tvshows' to list all genres of show 'Dexter'
--- 'tv_shows' table contains only one record where title = Dexter
--- Each record should display tv_genres.name
--- Results must be sorted in ascending order by genre name
--- You can only use one SELECT statement
-SELECT tv_genres.name
-FROM tv_genres
-INNER JOIN tv_show_genres m ON tv_genres.id = m.genre_id
-INNER JOIN tv_shows s ON m.show_id = s.id
-WHERE s.title = 'Dexter'
-ORDER BY tv_genres.name ASC;
+-- Lists all genres of the show Dexter in the database hbtn_0d_tvshows.
+-- Records are ordered by ascending genre name.
+SELECT g.`name`
+  FROM `tv_genres` AS g
+       INNER JOIN `tv_show_genres` AS s
+       ON g.`id` = s.`genre_id`
+
+       INNER JOIN `tv_shows` AS t
+       ON t.`id` = s.`show_id`
+       WHERE t.`title` = "Dexter"
+ ORDER BY g.`name`;
+ 

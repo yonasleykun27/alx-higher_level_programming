@@ -1,7 +1,8 @@
--- List all cities in db 'hbtn_0d_usa'
--- Each record should display cities.id, cities.name, and states.name
--- Can only use SELECT statement once
-SELECT cities.id, cities.name, states.name
-FROM states
-INNER JOIN cities
-ON states.id = cities.state_id;
+-- Lists all cities in the database hbtn_0d_usa.
+-- Records are sorted in order of ascending cities.id.
+SELECT c.`id`, c.`name`, s.`name`
+  FROM `cities` AS c
+       INNER JOIN `states` AS s
+       ON c.`state_id` = s.`id`
+ ORDER BY c.`id`;
+ 
